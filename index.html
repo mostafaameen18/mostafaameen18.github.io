@@ -24,6 +24,7 @@
         body{
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
             background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
         }
         .image-fluid{
@@ -31,6 +32,9 @@
             max-height: 100%;
             display: block;
             margin: auto;
+        }
+        .max-content{
+            width: max-content;
         }
         .hrcon{
             width: 99%;
@@ -55,9 +59,11 @@
             filter: drop-shadow(0px 0px 5px white);
         }
         .text-header{
-            color: white;
             font-weight: bold;
             font-family: 'Righteous', cursive;
+        }
+        .text-border{
+            border-bottom: 4px solid dodgerblue;
         }
         .fb-text{
             color: #3b5998;
@@ -340,6 +346,33 @@
             height: 100px;
         }
 
+
+
+
+
+        #contact{
+            width: 100%;
+            height: auto;
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+        .contact-form .input, .input:focus{
+            width: 100%;
+            height: 35px;
+            padding-left: 10px;
+            border: 2px solid dodgerblue;
+            background: midnightblue;
+            color: white;
+            font-weight: bold;
+            border-radius: 3px;
+            box-shadow: 0px 0px 5px grey;
+        }
+        .contact-form textarea.input , textarea.input:focus{
+            height: 100px;
+            resize: vertical;
+        }
+
+
     </style>
 </head>
 <body>
@@ -378,7 +411,7 @@
 
     <header id="header">
         <div class="header-md-text">
-            <h1 class="text-header">I'm full stack web developer,</h1>
+            <h1 class="text-header text-white">I'm full stack web developer,</h1>
             <h1 class="text-logo text-shadow">Mostafa Ameen.</h1>
             <a href="contact.html" class="hover-btn">Hire Me</a>
         </div>
@@ -482,56 +515,88 @@
 
 
     <section id="contact">
-        
+        <h2 class="text-border text-bold max-content mx-auto" style="color: dodgerblue">Contact Now</h2>
+        <div class="row d-md-flex justify-content-md-between">
+            <div class="col-md-6 col-12 p-3">
+                <form class="contact-form col-12 p-3" method="get" action="">
+                    <div class="mt-1 mb-1">
+                        <strong class="text-bold">Name*</strong>
+                        <input class="input" type="text" name="name" id="name">
+                    </div>
+                    <div class="mt-1 mb-1">
+                        <strong class="text-bold">Email*</strong>
+                        <input class="input" type="email" name="email" id="email">
+                    </div>
+                    <div class="mt-1 mb-1">
+                        <strong class="text-bold">Subject*</strong>
+                        <input class="input" type="text" name="subject" id="subject">
+                    </div>
+                    <div class="mt-1 mb-1">
+                        <strong class="text-bold">Message*</strong>
+                        <textarea class="input" type="text" name="message" id="message"></textarea>
+                    </div>
+                    <div class="mt-1 mb-1">
+                        <button type="submit" class="bttn input">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 col-12 p-3">
+                <div class="col-12 p-3 pt-5">
+                    <h2 class="mt-3 mb-3 text-center"><i class="fas fa-phone text-dark"></i> | <i class="fab fa-whatsapp text-success"></i> <span class="text-info">+20 120 1911 971</span></h2>
+                    <h4 class="mt-3 mb-3 text-center"><i class="fas fa-envelope text-dark"></i> | <span class="text-info">mostafa_ameen18@yahoo.com</span></h4>
+                
+                </div>
+            </div>
+        </div>
     </section>
 
 
 
 
     
-<footer class="page-footer font-small darken-3">
+    <footer class="page-footer font-small darken-3">
 
-    <div class="container">      
-        <div class="row">
-        
-            <div class="col-md-6 mx-auto py-5">
-                <div class="mb-5 flex-center justify-content-between">
-        
-                    
-                    <a class="fb-ic">
-                        <i class="fab fa-facebook-f fa-lg fb-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                    
-                    <a class="tw-ic">
-                        <i class="fab fa-twitter fa-lg tw-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                                        
-                    <a class="li-ic">
-                        <i class="fab fa-linkedin-in fa-lg li-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-
-                    <a class="li-ic">
-                        <i class="fab fa-github fa-lg git-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-
-                    <a class="li-ic">
-                        <i class="fab fa-stack-overflow fa-lg sof-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                    
-                    
-                </div>
-            </div>
+        <div class="container">      
+            <div class="row">
             
-    
+                <div class="col-md-6 mx-auto py-5">
+                    <div class="mb-5 flex-center justify-content-between">
+            
+                        
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg fb-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter fa-lg tw-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                                            
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg li-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+
+                        <a class="li-ic">
+                            <i class="fab fa-github fa-lg git-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+
+                        <a class="li-ic">
+                            <i class="fab fa-stack-overflow fa-lg sof-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+        
+            </div>
         </div>
-    </div>
     
   
     
-    <div class="text-bold text-center py-3">Copyright &copy; 2020 | All rights reserved</div>
+        <div class="text-bold text-center py-3">Copyright &copy; 2020 | All rights reserved</div>
     
   
-  </footer>
+    </footer>
   
 
 
